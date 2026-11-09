@@ -5,6 +5,6 @@ load_dotenv()
 
 GITHUB_URL = "https://github.com/"
 DETAILS = {
-    "github_username" : os.getenv("TEST_USERNAME"),
-    "github_password" : os.getenv("TEST_PASSWORD")
+    "github_username" : os.getenv("TEST_NAAMA_USERNAME"),
+    "github_password" : os.getenv("TEST_NAAMA_PASSWORD")
  }
