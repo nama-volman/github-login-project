@@ -1,7 +1,8 @@
 from playwright.sync_api import Page, expect
 from pages.login_github import LoginPage
+import pytest
 
-
+@pytest.mark.playwright
 def test_sign_in_to_gmail(page: Page):
     signInPage = LoginPage(page)
     page.pause()
