@@ -35,12 +35,13 @@ jobs:
         run: playwright install --with-deps chromium
 
 
+
       - name: Run tests
+        run: pytest
         env:
           TEST_NAAMA_USERNAME: ${{ vars.TEST_USERNAME }}
           TEST_NAAMA_PASSWORD: ${{ secrets.TEST_PASSWORD }}
-        run: pytest -sv
-
+          CI: ${{vars.CI}}
 
       - name: Upload report and failure artifacts
         if: always()
